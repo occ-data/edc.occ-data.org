@@ -12,16 +12,15 @@ Paginate = 4
   email = "info@occ-data.org"
 
 
-
+[[menu.main]]
+    name = "More Data"
+    weight = 200
+    url = "https://www.opensciencedatacloud.org/publicdata/?commons_type=Environmental"
 [[menu.main]]
     name = "NEXRAD"
-    weight = -100
+    weight = 2
     url = "/nexrad/"
 [[menu.main]]
-    name = "GOES16"
-    weight = -100
+    name = "GOES-16"
+    weight = 1
     url = "/goes16/"
-[[menu.main]]
-    name = "Blog"
-    weight = -100
-    url = "/blog/"
