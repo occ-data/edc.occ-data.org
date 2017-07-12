@@ -1,10 +1,10 @@
 +++
 title = "Get Data"
-date = "2017-07-12 T16:41:40+01:00"
+date = "2017-07-12"
 draft = false
 weight = 100
-description = "How to get GOES-16 data from the OCC Environmental Data Commons"
-bref= "Simple ways to display NEXRAD LEVEL 2 data in Python using the Signpost ID Service."
+description = "How to get NEXRAD data from the OCC Environmental Data Commons"
+bref= "Simple ways to display NEXRAD LEVEL 2 data in Python using the Signpost ID Service"
 toc= true
 +++
 
