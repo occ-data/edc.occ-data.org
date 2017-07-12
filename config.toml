@@ -1,0 +1,27 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "The OCC Environmental Data Commons"
+theme = "kube"
+description = "Repository for environmental public data sets of scientific interest, hosted as part of the Open Science Data Cloud Ecosystem"
+Paginate = 4
+[Params]
+  RSSLink = "/index.xml"
+  author = "Open Commons Consortium" # add your company name
+  github = "https://github.com/occ-data" # add your github profile name
+  twitter = "OCC_Data" # add your twitter profile
+  email = "info@occ-data.org"
+
+
+
+[[menu.main]]
+    name = "NEXRAD"
+    weight = -100
+    url = "/nexrad/"
+[[menu.main]]
+    name = "GOES16"
+    weight = -100
+    url = "/goes16/"
+[[menu.main]]
+    name = "Blog"
+    weight = -100
+    url = "/blog/"

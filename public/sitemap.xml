@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/blog/welcome/</loc>
+    <lastmod>2017-03-02T21:56:55+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/goes16/typography/</loc>
+  </url>
+  
+  <url>
+    <loc>/nexrad/typography/</loc>
+  </url>
+  
+  <url>
+    <loc>/goes16/tabs/</loc>
+    <lastmod>2017-04-10T16:41:40+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/nexrad/tabs/</loc>
+    <lastmod>2017-04-10T16:41:40+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/goes16/breadcrumbs/</loc>
+    <lastmod>2017-04-10T16:41:54+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/nexrad/breadcrumbs/</loc>
+    <lastmod>2017-04-10T16:41:54+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/collapse/</loc>
+    <lastmod>2017-04-10T16:42:50+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/goes16/toggleme/</loc>
+    <lastmod>2017-04-10T16:42:59+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/nexrad/toggleme/</loc>
+    <lastmod>2017-04-10T16:42:59+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/goes16/animation/</loc>
+    <lastmod>2017-04-10T16:43:08+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/nexrad/animation/</loc>
+    <lastmod>2017-04-10T16:43:08+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/goes16/utils/</loc>
+    <lastmod>2017-04-10T16:43:30+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/nexrad/utils/</loc>
+    <lastmod>2017-04-10T16:43:30+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/</loc>
+    <lastmod>2017-03-02T21:56:55+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/example/</loc>
+    <lastmod>2017-03-02T21:56:55+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/general/</loc>
+    <lastmod>2017-03-02T21:56:55+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/goes16/</loc>
+    <lastmod>2017-04-10T16:41:40+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/markdown/</loc>
+    <lastmod>2017-03-02T21:56:55+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/nexrad/</loc>
+    <lastmod>2017-04-10T16:41:40+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2017-03-02T21:56:55+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2017-03-02T21:56:55+01:00</lastmod>
+  </url>
+  
+</urlset>
