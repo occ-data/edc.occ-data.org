@@ -44,6 +44,6 @@ MIT
 
 ## Credit 
 
-- [kube framework] (https://imperavi.com/kube/)
-- [after dark theme] (https://github.com/comfusion/after-dark)
+- [kube framework](https://imperavi.com/kube/)
+- [after dark theme](https://github.com/comfusion/after-dark)
 
