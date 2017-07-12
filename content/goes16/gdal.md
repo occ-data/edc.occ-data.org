@@ -1,6 +1,6 @@
 +++
 description = "Using GDAL to Work with GOES-16 NetCDF Data"
-title = "GDAL"
+title = "Manipulating GOES-16 Data with GDAL"
 date = "2017-07-12T12:00:00+00:00"
 draft = false
 weight = 300
@@ -8,10 +8,10 @@ toc = true
 bref = "This is an example of how to use GDAL to turn a NetCDF file into a png image"
 +++
 
-# GDAL Setup
+### GDAL Setup
 The Geospatial Data Abstraction Library (GDAL; [gdal.org](http://www.gdal.org)) is a library and set of command line tools. GDAL supports reading the GOES-16 NetCDF files after a series of patches were recently upstreamed by the OCC team. The patches should be incorporated into GDAL version 2.2, and so for now GDAL must be built from source to work fully with the GOES-16 dataset.
 
-# Using GDAL with Docker
+### Using GDAL with Docker
 The easiest way to get started with GDAL is to use the docker image built by OCC which includes the HDF5 & NetCDF libraries. This image builds GDAL from source so it is always the latest version. The dockerfile can be found on the [OCC GDAL container repo](https://github.com/occ-data/GDAL-Container).
 
 In the directory with the GOES-16 data you want to work with:
@@ -75,7 +75,7 @@ Center      (  256.0,  256.0)
 The NetCDF files contain subdatasets, in this example `NETCDF:"OR_ABI-L1b-RadF-M3C02_G16_s20171921545382_e20171921556149_c20171921556183.nc":Rad` and `NETCDF:"OR_ABI-L1b-RadF-M3C02_G16_s20171921545382_e20171921556149_c20171921556183.nc":DQF`. These strings can be used as input into GDAL to refer to the specific subsets.
 
 
-## Unscaling and Converting to PNG
+### Unscaling and Converting to PNG
 To create a png image which we can view we should first extract the subdataset we are interested in and unscale the data values. The `gdal_translate` program is what we will use for this step. It can extract the dataset and do the unscaling in a single step. The NetCDF files for GOES-16 store most data values as 16-bit integers, however working with 32-bit floating point numbers is significantly easier so we will do that conversion at this step as well.
 ```
 docker exec -ti gdal gdal_translate -ot float32 -unscale -CO COMPRESS=deflate NETCDF:"OR_ABI-L1b-RadF-M3C02_G16_s20171921545382_e20171921556149_c20171921556183.nc":Rad fulldisk.tif
@@ -89,7 +89,7 @@ docker exec -ti gdal gdal_translate -ot Byte -of png -scale 0 650 0 255 fulldisk
 This command will convert the tiff file to a png while scaling the data values from 0-650 in the tiff to 0-255 so that they fit in a byte for the png file.
 ![Full Disk GOES-16 Sample Image Created Using GDAL](gdal_fulldisk.png "Full Disk GOES-16 png")
 
-## Reprojecting GOES-16 Data
+### Reprojecting GOES-16 Data
 Now that you have a basic idea of how to work with the data you may be interested in using it in GIS applications such as ArcGIS or QGIS. To do this we need to reproject the data from the geostationary viewpoint into a rectilinear projection such as geographic (just lat-lon values). We will use the `gdalwarp` utility to do this reprojection process while using the tiff file from the previous step.
 ```
 docker exec -ti gdal gdalwarp -t_srs EPSG:4326 -dstnodata -999.0 fulldisk.tif fulldisk_geo.tif
