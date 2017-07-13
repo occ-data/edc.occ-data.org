@@ -14,7 +14,7 @@ Paginate = 4
 
 [[menu.main]]
     name = "About"
-    weight = 1
+    weight = 4
     url = "http://www.occ-data.org/about/"
 [[menu.main]]
     name = "More Data"
