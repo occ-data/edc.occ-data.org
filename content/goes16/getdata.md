@@ -64,6 +64,13 @@ Data access is provided via a S3-API compatible service. The files may be downlo
 
 [https://osdc.rcc.uchicago.edu/noaa-goes16](https://osdc.rcc.uchicago.edu/noaa-goes16)
 
+This endpoint is S3-api compatible, so when you visit in your browser it will return XML with a truncated list of files available to download.
+
+We recommend using the [awscli](https://aws.amazon.com/cli/) or the [python boto library](https://github.com/boto/boto) to access the data. An example awscli command to list the contents of the bucket would look like:
+```
+aws s3 ls s3://noaa-goes16/ --no-sign-request --endpoint-url https://osdc.rcc.uchicago.edu --no-verify-ssl
+```
+
 The current plan is to store a rolling 100 TB archive of GOES-16 data. At present data volumes we expect this to be an about 8 month rolling archive.
 
 This dataset is being generously hosted by The Research Computing Center (RCC) at the University of Chicago.
