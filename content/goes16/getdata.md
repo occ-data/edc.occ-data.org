@@ -64,6 +64,8 @@ Data access is provided via a S3-API compatible service. The files may be downlo
 
 [https://osdc.rcc.uchicago.edu/noaa-goes16](https://osdc.rcc.uchicago.edu/noaa-goes16)
 
+The current plan is to store a rolling 100 TB archive of GOES-16 data. At present data volumes we expect this to be an about 8 month rolling archive.
+
 This dataset is being generously hosted by The Research Computing Center (RCC) at the University of Chicago.
 
 The [Research Computing Center](https://rcc.uchicago.edu/), within the Office of the Executive Vice President for Research. Innovation, and National Laboratories, was created in early 2010 to provide the University of Chicago community a full-service high-performance computing (HPC) resources, including one of the top 500 HPC cluster, high-speed parallel storage, 3D HD visualization facilities, ready-to-use applications, domain computational scientists, and data-management strategies to researchers and students across all departments and divisions of the University. 
