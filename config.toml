@@ -13,6 +13,10 @@ Paginate = 4
 
 
 [[menu.main]]
+    name = "About"
+    weight = 1
+    url = "http://www.occ-data.org/about/"
+[[menu.main]]
     name = "More Data"
     weight = 3
     url = "https://www.opensciencedatacloud.org/publicdata/?commons_type=Environmental"
