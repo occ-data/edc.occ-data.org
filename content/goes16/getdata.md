@@ -21,42 +21,44 @@ The data is being made available in a NetCDF file format. The data are reference
 
 There are several Level 1b (L1b) and Level 2 (L2) ABI products available over different regions with different scanning times. The table below summarizes the products, the refresh rate for the products and gives example paths of where to find the data.
 
+*When in doubt, start with the Level 2 products!*
+
 | Product Level | Product Name | Product Short Name | ABI Scene | Time Between Images | Example File Name |
 | ------------- | :----------: | :----------------: | :-------: | :-----: | :-------: |
 |   L1b | Radiances | RadM | Mesoscale | 30-60 seconds | ABI-L1b-RadM/2017/192/19/OR_ABI-L1b-RadM-M3C14_G16_s20171921952189_e20171921954562_c20171921955013.nc |
 |   L1b | Radiances | RadC | CONUS | 5 minutes | ABI-L1b-RadC/2017/192/19/OR_ABI-L1b-RadC-M3C14_G16_s20171921952189_e20171921954562_c20171921955013.nc |
 |   L1b | Radiances | RadF | Full Disk | 15 minutes | ABI-L1b-RadF/2017/192/19/OR_ABI-L1b-RadF-M3C14_G16_s20171921952189_e20171921954562_c20171921955013.nc |
-|   L2 | Cloud & Moisture Imagery | CMIPM | Mesoscale | 30-60 seconds | ABI-L2-CMIPM/2017/191/21/OR_ABI-L2-CMIPM1-M3C02_G16_s20171912128268_e20171912128326_c20171912128391.nc |
-|   L2 | Cloud & Moisture Imagery | CMIPC | CONUS | 5 Minutes | ABI-L2-CMIPC/2017/191/21/OR_ABI-L2-CMIPC-M3C02_G16_s20171912122189_e20171912124562_c20171912125065.nc |
-|   L2 | Cloud & Moisture Imagery | CMIPF | Full Disk | 15 Minutes | ABI-L2-CMIPF/2017/192/15/OR_ABI-L2-CMIPF-M3C02_G16_s20171921515382_e20171921526149_c20171921526214.nc |
-|   L2 | Multi-Band Cloud & Moisture Imagery | MCMIPM | Mesoscale | 30-60 seconds | ABI-L2-MCMIPM/2017/191/21/OR_ABI-L2-MCMIPM2-M3_G16_s20171912130568_e20171912131031_c20171912131105.nc |
-|   L2 | Multi-Band Cloud & Moisture Imagery | MCMIPC | CONUS | 5 Minutes | ABI-L2-MCMIPC/2017/191/21/OR_ABI-L2-MCMIPC-M3_G16_s20171912122189_e20171912124562_c20171912125065.nc |
-|   L2 | Multi-Band Cloud & Moisture Imagery | MCMIPF | Full Disk | 15 Minutes | ABI-L2-MCMIPF/2017/191/21/OR_ABI-L2-MCMIPF-M3_G16_s20171912115380_e20171912126152_c20171912126330.nc  |
+|   L2 | Reflectance or Brightness Temperature | CMIPM | Mesoscale | 30-60 seconds | ABI-L2-CMIPM/2017/191/21/OR_ABI-L2-CMIPM1-M3C02_G16_s20171912128268_e20171912128326_c20171912128391.nc |
+|   L2 | Reflectance or Brightness Temperature | CMIPC | CONUS | 5 Minutes | ABI-L2-CMIPC/2017/191/21/OR_ABI-L2-CMIPC-M3C02_G16_s20171912122189_e20171912124562_c20171912125065.nc |
+|   L2 | Reflectance or Brightness Temperature | CMIPF | Full Disk | 15 Minutes | ABI-L2-CMIPF/2017/192/15/OR_ABI-L2-CMIPF-M3C02_G16_s20171921515382_e20171921526149_c20171921526214.nc |
+|   L2 | All Bands at 2km, Reflectance or Brightness Temperature | MCMIPM | Mesoscale | 30-60 seconds | ABI-L2-MCMIPM/2017/191/21/OR_ABI-L2-MCMIPM2-M3_G16_s20171912130568_e20171912131031_c20171912131105.nc |
+|   L2 | All Bands at 2km, Reflectance or Brightness Temperature | MCMIPC | CONUS | 5 Minutes | ABI-L2-MCMIPC/2017/191/21/OR_ABI-L2-MCMIPC-M3_G16_s20171912122189_e20171912124562_c20171912125065.nc |
+|   L2 | All Bands at 2km, Reflectance or Brightness Temperature | MCMIPF | Full Disk | 15 Minutes | ABI-L2-MCMIPF/2017/191/21/OR_ABI-L2-MCMIPF-M3_G16_s20171912115380_e20171912126152_c20171912126330.nc  |
 
 The ABI sensor images over 16 different channels (wavelengths) as described in the table below
 
-| Channel | Central Wave Length (µm) | Sprectrum Name |
-| :----:  | :---------: | :------------: |
-| 1       |  0.47  |   Visible - Blue |
-| 2       |  0.64  | Visible - Red |
-| 3       |  0.86  | Near IR - Vegetation |
-| 4       |  1.37  | Near IR - Cirrus |
-| 5       |  1.6  | Near IR - Snow/Ice |
-| 6       |  2.2  | Near IR - Cloud Ice |
-| 7       |  3.9  | IR - Shortwave |
-| 8       |  6.2  | IR - Upper-Level Water Vapor |
-| 9       |  6.9  | IR - Mid-Level Water Vapor |
-| 10       |  7.3  | IR - Lower-Level Water Vapor |
-| 11       |  8.4 | IR - Cloud Top Phase |
-| 12       |  9.6  | IR - Ozone |
-| 13       |  10.3  | IR - Clean |
-| 14       |  11.2 | IR - Standard |
-| 15       |  12.3  | IR - Dirty |
-| 16       | 13.3  | IR - CO2 |
+| Channel | Resolution (km) | Central Wave Length (µm) | Sprectrum Name |
+| :----:  | :--------- | :--------- | :------------ |
+| 1       |  1 | 0.47  |   Visible - Blue |
+| 2       |  0.5 | 0.64  | Visible - Red |
+| 3       |  1 | 0.86  | Near IR - Vegetation |
+| 4       |  2 | 1.37  | Near IR - Cirrus |
+| 5       |  1 | 1.6  | Near IR - Snow/Ice |
+| 6       |  2 | 2.2  | Near IR - Cloud Ice |
+| 7       |  2 | 3.9  | IR - Shortwave |
+| 8       |  2 | 6.2  | IR - Upper-Level Water Vapor |
+| 9       |  2 | 6.9  | IR - Mid-Level Water Vapor |
+| 10       |  2 | 7.3  | IR - Lower-Level Water Vapor |
+| 11       |  2 | 8.4 | IR - Cloud Top Phase |
+| 12       |  2 | 9.6  | IR - Ozone |
+| 13       |  2 | 10.3  | IR - Clean |
+| 14       |  2 | 11.2 | IR - Standard |
+| 15       |  2 | 12.3  | IR - Dirty |
+| 16       | 2 | 13.3  | IR - CO2 |
 
-The filenames are
+The filenames are as follows for L1b products:
 
-    <sensor>-<level>-<product short name>/<year>/<julian day>/<hour>/OR_<sensor>-<level>-<product short name>-M<scanning mode>-C<channel>-G<GOES Satellite>-s<start time>_e<end time>_c<central time>.nc
+    <sensor>-<level>-<product short name>/<year>/<julian day>/<hour>/OR_<sensor>-<level>-<product short name>-M<scanning mode>-C<channel>-G<GOES Satellite>-s<start time>_e<end time>_c<creation time>.nc
 
 ### Data Access
 
