@@ -12,7 +12,7 @@ bref = "This is an example of how to use GDAL to turn a NetCDF file into a png i
 The Geospatial Data Abstraction Library (GDAL; [gdal.org](http://www.gdal.org)) is a library and set of command line tools. GDAL supports reading the GOES-16 NetCDF files after a series of patches were recently upstreamed by the OCC team. The patches should be incorporated into GDAL version 2.2, and so for now GDAL must be built from source to work fully with the GOES-16 dataset.
 
 ### Using GDAL with Docker
-The easiest way to get started with GDAL is to use the docker image built by OCC which includes the HDF5 & NetCDF libraries. This image builds GDAL from source so it is always the latest version. The dockerfile can be found on the [OCC GDAL container repo](https://github.com/occ-data/GDAL-Container).
+The easiest way to get started with GDAL is to use the docker image built by OCC which includes the HDF5 & NetCDF libraries. This image builds GDAL from source so it is always the latest version. The dockerfile can be found on the [OCC GDAL container repo](https://github.com/occ-data/containers/tree/master/gdal).
 
 In the directory with the GOES-16 data you want to work with:
 ```
