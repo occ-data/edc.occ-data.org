@@ -14,12 +14,20 @@ Paginate = 4
 
 [[menu.main]]
     name = "About"
-    weight = 4
+    weight = 6
     url = "http://www.occ-data.org/about/"
 [[menu.main]]
+    name = "Software"
+    weight = 5
+    url = "/software"
+[[menu.main]]
     name = "More Data"
-    weight = 3
+    weight = 4
     url = "https://www.opensciencedatacloud.org/publicdata/?commons_type=Environmental"
+[[menu.main]]
+    name = "NWM"
+    weight = 3
+    url = "/nwm/"
 [[menu.main]]
     name = "NEXRAD"
     weight = 2

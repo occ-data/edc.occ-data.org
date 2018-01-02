@@ -37,6 +37,14 @@ hugo server -w
 Now you can go to [localhost:1313](http://localhost:1313) and the `kube`
 theme should be visible.
 
+## Updating edc.occ-data.org
+
+``` sh
+rm -rf public
+./hugo
+aws s3 sync public/ s3://edc.occ-data.org --acl public-read
+```
+
 
 ## License
 
