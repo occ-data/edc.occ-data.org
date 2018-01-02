@@ -8,9 +8,6 @@ toc = true
 bref = ""
 +++
 
-### Provisional Data
-*__NOAA's GOES-16 satellite has not been declared operational and its data are preliminary and undergoing testing.__*
-
 ### Best Effort
 The data are being made available on a best effort basis by all parties involved. There are no guarantees the data will be available when you really need it.
 
