@@ -74,4 +74,25 @@ This dataset is being generously hosted by The Research Computing Center (RCC) a
 
 The [Research Computing Center](https://rcc.uchicago.edu/), within the Office of the Executive Vice President for Research. Innovation, and National Laboratories, was created in early 2010 to provide the University of Chicago community a full-service high-performance computing (HPC) resources, including one of the top 500 HPC cluster, high-speed parallel storage, 3D HD visualization facilities, ready-to-use applications, domain computational scientists, and data-management strategies to researchers and students across all departments and divisions of the University. 
 
+### Archive: 2017 Major Hurricanes
+
+To facilitate ease of use for the research community an archive of the available GOES 16 data surrounding the 2017 Hurricane season is available on OSDC Griffin.   The available data products for all date ranges for the 2017 >= Category 4 Hurricanes (Maria, Irma, Jose) are available at: 
+
+[https://griffin-objstore.opensciencedatacloud.org/noaa-goes16-hurricane-archive-2017/](https://griffin-objstore.opensciencedatacloud.org/noaa-goes16-hurricane-archive-2017/)
+
+```
+irma_range = [242, 259] #Formed: August 30, 2017; Dissipated: September 16, 2017
+maria_range = [259, 276] #Formed: September 16, 2017; Dissipated: October 3, 2017
+jose_range = [248, 269] #Formed: September 5, 2017; Dissipated: September 26, 2017
+```
+
+A sample command for pulling the L1b-RadC product for day 1 of Hurricane Irma from OSDC using awscli:   
+
+```
+aws s3 cp s3://noaa-goes16-hurricane-archive-2017/ABI-L1b-RadC/242/. [mylocaldir] --endpoint-url https://griffin-objstore.opensciencedatacloud.org --recursive
+```
+
+Please note that OSDC Griffin currently only handles awsv2 signatures, so it may be necessary to manage an environment for transfer where awscli or botocore <= version 1.09.  
+
+For more information on pulling data from OSDC Griffin, or sample functions that can aid pulling multiple products for multiple days, review the notebook at: https://github.com/wwells/data-transfer/blob/master/HurricaneTransfer.ipynb
 
