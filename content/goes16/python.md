@@ -221,6 +221,62 @@ plt.show()
 
 Much better!
 
+### GLM Point Data
+The Geostationary Lightning Mapper (GLM) provides point based data of lightning, flashes, groups, and events.
+
+
+```python
+g16glm = Dataset('OR_GLM-L2-LCFA_G16_s20180471253200_e20180471253400_c20180471253551.nc', 'r')
+```
+
+### GLM Counts
+GLM provides latitude longitude points for events (detections) which are then aggregated into group and flash events. Think about how for a single ground strike in a supercell thunderstorm the intracloud portion of the lightning may extend for many 10s to 100s of miles as the extent of the events. This data is then aggregated to provide cluster centroids which are stored as the flashes.
+
+
+```python
+event_lat = g16glm.variables['event_lat'][:]
+event_lon = g16glm.variables['event_lon'][:]
+
+group_lat = g16glm.variables['group_lat'][:]
+group_lon = g16glm.variables['group_lon'][:]
+
+flash_lat = g16glm.variables['flash_lat'][:]
+flash_lon = g16glm.variables['flash_lon'][:]
+```
+
+### GLM Plots
+Here we will just plot all of the data on top of each other so you can observed how the data are aggregated together.
+
+```python
+fig = plt.figure(figsize=(6,6),dpi=200)
+map = Basemap(projection='merc', lat_0 = 0, lon_0 = -70.0,
+    resolution = 'l', area_thresh = 1000.0,
+    llcrnrlon=-135.0, llcrnrlat=-65.0,
+    urcrnrlon=0.0, urcrnrlat=65.0)
+
+map.drawcoastlines()
+map.drawcountries()
+map.fillcontinents(color = 'tan')
+map.drawmapboundary()
+
+
+# Plot events as large blue dots
+event_x, event_y = map(event_lon, event_lat)
+map.plot(event_x, event_y, 'bo', markersize=7)
+
+# Plot groups as medium green dots
+group_x, group_y = map(group_lon, group_lat)
+map.plot(group_x, group_y, 'go', markersize=3)
+
+# Plot flashes as small red dots
+flash_x, flash_y = map(flash_lon, flash_lat)
+map.plot(flash_x, flash_y, 'ro', markersize=1)
+
+plt.show()
+```
+
+![png](output_43_1.png)
+
 ### Jupyter Notebook
 
 The notebook and example data shown here are available at [https://github.com/occ-data/goes16-jupyter](https://github.com/occ-data/goes16-jupyter)
