@@ -11,7 +11,7 @@ bref = ""
 ### Best Effort
 The data are being made available on a best effort basis by all parties involved. There are no guarantees the data will be available when you really need it.
 
-### National Water Model Retrospective Version 1.0
+### National Water Model Retrospective Version 1.2
 
 * 24 Year retrospective simulation (Jan 1 1993 - Sept 30 2016)
 * A reanalysis rather than a reforecast (forcing different than real-time runs)
