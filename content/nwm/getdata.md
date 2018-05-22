@@ -13,14 +13,14 @@ The data are being made available on a best effort basis by all parties involved
 
 ### National Water Model Retrospective Version 1.2
 
-* 24 Year retrospective simulation (Jan 1 1993 - Sept 30 2016)
+* 25 Year retrospective simulation (Jan 1 1993 - Dec 31 2017)
 * A reanalysis rather than a reforecast (forcing different than real-time runs)
 * Output fields are fewer and less frequent than real-time to conserve space
 * Provides historical context to current conditions
 * Can be used to infer flow frequencies and perform temporal analyses
-* 32 Tb in size, with hourly streamflow output and 3-hourly land surface output
+* 584,384 objects, 21.7 Tb in size, with hourly streamflow output and 3-hourly land surface output
 
-#### Reanalsys Technical Details
+#### Reanalysis Technical Details
 
 * Forced with [NLDAS](http://www.emc.ncep.noaa.gov/mmb/nldas/) and [NARR](https://www.esrl.noaa.gov/psd/data/gridded/data.narr.html)
 * 1992 used as a warmup period so the data in 1993 is good.
@@ -32,21 +32,21 @@ The data is being made available in a NetCDF file format. The data are a combina
 
 ### Products Available & Name Conventions
 
-There are several files which contain various output products for each time step. They are detailed below. The files are compressed with the zip format to reduce filesize.
+There are several files which contain various output products for each time step. They are detailed below.
 
 
 
 | Product Name | File Description | Time Between Files | Example File Name |
 | ------------- | :----------: | :----------------: | :-------: |
-| CHRT | Streamflow values at points associated with flow lines | 1-hour | 201409090000.CHRTOUT_DOMAIN1.zip |
-| LAKE | Output values at points associated with lakes & reservoirs | 1-hour | 201409090000.LAKEOUT_DOMAIN1.zip |
-| LDAS | Land surface model output including radiation, ET, snow, etc.  at 1-km resolution | 3-hourly | 201409090000.LDASOUT_DOMAIN1.zip |
-| RT | Ponded water depth and depth to soil saturation at 250-m resolution | 3-hourly | 201409090000.RTOUT_DOMAIN1.zip |
+| CHRT | Streamflow and other values at points associated with stream channel flow lines | 1-hour | 201409090000.CHRTOUT_DOMAIN1.comp |
+| LAKE | Output values at points associated with lakes & reservoirs | 1-hour | 201409090000.LAKEOUT_DOMAIN1.comp |
+| LDAS | Land surface model output including soil moisture, radiation, ET, snow, etc. at 1-km resolution | 3-hourly | 201409090000.LDASOUT_DOMAIN1.comp |
+| RT | Ponded water depth and depth to soil saturation at 250-m resolution | 3-hourly | 201409090000.RTOUT_DOMAIN1.comp |
 
 
 The filenames are
 
-    <year><month><day><hour>00.<product>OUT_DOMAIN1.zip
+    <year><month><day><hour>00.<product>OUT_DOMAIN1.comp
 
 ### Archive Data Access
 
